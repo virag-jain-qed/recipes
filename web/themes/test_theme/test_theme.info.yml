@@ -1,0 +1,10 @@
+name: "Test Theme"
+type: theme
+description: "A test theme."
+core_version_requirement: ^9 || ^10 || ^11
+package: Custom
+base theme: olivero
+
+libraries:
+  - test_theme/test-styling
+
