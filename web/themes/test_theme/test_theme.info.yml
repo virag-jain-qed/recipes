@@ -8,3 +8,10 @@ base theme: olivero
 libraries:
   - test_theme/test-styling
 
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'First sidebar'
+  footer: Footer

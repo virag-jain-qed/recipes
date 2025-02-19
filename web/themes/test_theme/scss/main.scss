@@ -1,0 +1,27 @@
+// Define variables
+$background-color: rgba(0, 0, 0, 0.8);
+$text-bg-color: rgba(0, 0, 0, 0.5);
+
+body {
+  background-color: $background-color;
+}
+
+#block-test-theme-imagewithtext {
+  position: relative;
+
+  .field--name-field-banner-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $text-bg-color;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(106, 101, 101);
+    text-align: center;
+    width: 80%;
+  }
+}
+
