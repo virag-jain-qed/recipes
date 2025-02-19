@@ -8,6 +8,9 @@
         "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
         "chat": "https://www.drupal.org/node/314178"
     },
+    "scripts": {
+        "watch-scss": "sass --watch web/themes/test_theme/scss/main.scss:web/themes/test_theme/css/style.css"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -105,5 +108,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "scss/scss": "^1.4"
     }
 }

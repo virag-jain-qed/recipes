@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15d2971de3d8d79605239d48062358b7",
+    "content-hash": "87be6c3a0eb371329cb52cd11d698c35",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7369,7 +7369,46 @@
             "time": "2025-01-29T07:06:14+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "scss/scss",
+            "version": "1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thangtn-neolab/laravel_scss.git",
+                "reference": "081af74b9e73987264380e37a8be615216ad38d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thangtn-neolab/laravel_scss/zipball/081af74b9e73987264380e37a8be615216ad38d0",
+                "reference": "081af74b9e73987264380e37a8be615216ad38d0",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Scss\\Scss\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "TNT",
+                    "email": "thang.tn@neo-lab.vn",
+                    "role": "Developer"
+                }
+            ],
+            "description": "compile scss to css",
+            "support": {
+                "issues": "https://github.com/thangtn-neolab/laravel_scss/issues",
+                "source": "https://github.com/thangtn-neolab/laravel_scss/tree/1.4"
+            },
+            "time": "2020-11-13T02:05:11+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
