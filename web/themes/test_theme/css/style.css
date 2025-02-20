@@ -1,23 +1,31 @@
+/* Global Styles */
 body {
-  background-color: rgba(0, 0, 0, 0.8);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
 }
 
-#block-test-theme-imagewithtext {
-  position: relative;
+h1, h2 {
+  color: #333;
+  font-weight: 700;
 }
-#block-test-theme-imagewithtext .field--name-field-banner-text {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+
+p {
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  background-color: #ff6347;
   color: white;
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgb(106, 101, 101);
-  text-align: center;
-  width: 80%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #e5533b;
 }
 
 /*# sourceMappingURL=style.css.map */

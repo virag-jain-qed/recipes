@@ -1,0 +1,21 @@
+.custom-banner {
+  position: relative;
+  background: #000;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+.custom-banner img {
+  width: 100%;
+  height: auto;
+}
+.custom-banner .banner-text {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=custom-banner.css.map */

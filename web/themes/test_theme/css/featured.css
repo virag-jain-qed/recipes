@@ -1,0 +1,16 @@
+/* Featured Page Styles */
+.featured-page-wrapper {
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+.featured-page-wrapper .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.custom-site-name {
+  color: red;
+}
+
+/*# sourceMappingURL=featured.css.map */

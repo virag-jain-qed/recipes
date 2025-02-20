@@ -1,4 +1,4 @@
-<div id="page-wrapper" class="page-wrapper">
+<div id="page-wrapper" class="page-wrapper" style="background-color: {{custom_bg_color}};">
   <div id="page">
 
     {# Header Section #}
@@ -88,6 +88,9 @@
       <div class="container footer-container">
         <div class="footer-top">
           {{ page.footer_top }}
+        </div>
+        <div>
+          {{ page.custom_footer_message }}
         </div>
         <div class="footer-bottom">
           {{ page.footer_bottom }}
