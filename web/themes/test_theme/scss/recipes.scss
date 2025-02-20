@@ -1,0 +1,12 @@
+/* Recipes Page Styles */
+.recipes-page-wrapper {
+    background-color: #fff;
+    padding: 40px;
+    
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  }
+  

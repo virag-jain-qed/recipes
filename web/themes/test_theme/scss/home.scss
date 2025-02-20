@@ -1,0 +1,47 @@
+/* Homepage Styles */
+.homepage-wrapper {
+    .hero-banner {
+      background: url('/path/to/your/banner-image.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+  
+      .cta-button {
+        margin-top: 20px;
+        font-size: 1.2rem;
+      }
+    }
+  
+    .content-wrapper {
+      padding: 40px;
+      background-color: #fff;
+  
+      section {
+        margin-bottom: 60px;
+      }
+  
+      .featured-recipes h2,
+      .categories h2 {
+        margin-bottom: 30px;
+        font-size: 2rem;
+      }
+  
+      .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+  
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+      }
+    }
+  }
+  

@@ -1,0 +1,61 @@
+/* Header Styling */
+.site-header {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.site-header .site-logo a img {
+  max-height: 50px;
+}
+.site-header .main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.site-header .main-navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+.site-header .main-navigation a:hover {
+  color: #ff6347;
+}
+.site-header .search-bar {
+  position: relative;
+}
+.site-header .search-bar .search-form {
+  display: flex;
+  align-items: center;
+}
+.site-header .search-bar .search-form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  margin-right: 10px;
+  width: 200px;
+}
+.site-header .search-bar .search-form button {
+  background-color: #ff6347;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.site-header .search-bar .search-form button svg {
+  fill: white;
+}
+
+/*# sourceMappingURL=header.css.map */
