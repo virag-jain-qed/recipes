@@ -1,6 +1,6 @@
 test-styling:
   css:
     theme:
-      css/style.css: {}
+      dist/index.css: {}
   js:
     js/script.js: {}

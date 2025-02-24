@@ -34,3 +34,29 @@ function test_theme_form_system_theme_settings_alter(&$form, FormStateInterface 
     '#description' => t('Enter a custom Site Name.'),
   ];
 }
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function theme_name_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  
+  if ($current_path == '/recipes') {
+    $suggestions[] = 'page__recipes';
+  }
+  elseif ($current_path == '/featured') {
+    $suggestions[] = 'page__featured';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function theme_name_preprocess_page(&$variables) {
+  // Add variables for the hero section on the homepage
+  if ($variables['is_front']) {
+    $variables['hero_title'] = t('Discover Delicious Recipes');
+    $variables['hero_description'] = t('Explore our collection of mouth-watering recipes from around the world. From quick weekday meals to gourmet dishes.');
+    $variables['hero_image'] = theme_get_setting('hero_image') ?: '/themes/custom/theme_name/images/hero-default.jpg';
+  }
+}

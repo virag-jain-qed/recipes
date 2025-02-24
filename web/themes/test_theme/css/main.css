@@ -1,26 +1,4 @@
-/* Global Styles */
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-p {
-  font-size: 1.2rem;
-}
-
-.cta-button {
-  background-color: #ff6347;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-}
-
-.cta-button:hover {
-  background-color: #e5533b;
-}
-
-/*# sourceMappingURL=main.css.map */

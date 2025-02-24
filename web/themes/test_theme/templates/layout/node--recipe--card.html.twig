@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Override of Olivero's node teaser template for recipe content type.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'relative overflow-hidden rounded-lg border bg-card shadow transition-shadow hover:shadow-lg'
+  ]
+%}
+
+
+<article{{ attributes.addClass(classes) }} class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+  <!-- Image -->
+  <div class="relative rounded-full">
+    {{ content.field_recipe_image }}
+    {% if node.field_featured.value %}
+      <div class="absolute right-2 top-2 rounded px-1 py-0.5 text-sm text-white bg-orange-500 ">
+        {{ 'Featured'|t }}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Content -->
+  <div class="p-4 text-center">
+    <h2{{ title_attributes.addClass('text-lg font-semibold mb-2') }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+
+    <div class="flex flex-col items-start text-gray-600 p-2">
+    {# Time #}
+    <div class="flex items-center gap-1 justify-center">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+           <p class="mt-2 text-sm font-medium text-gray-500">{{ node.field_cooking_time.value }} mins</p>
+      </div>
+    
+    {# DIFficulty #}
+    {% if content.field_difficulty %}
+      <div class="flex items-center gap-1">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        {{ content.field_difficulty }}
+      </div>
+      {% endif %}
+
+      </div>
+  </div>
+</article>
