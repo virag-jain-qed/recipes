@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function twig_debug_toggle_init() {
+  // Check if the user is authenticated
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    // Enable Twig debugging for authenticated users
+    \Drupal::service('twig.config')->set('debug', TRUE);
+  }
+  else {
+    // Disable Twig debugging for non-authenticated users
+    \Drupal::service('twig.config')->set('debug', FALSE);
+  }
+}
