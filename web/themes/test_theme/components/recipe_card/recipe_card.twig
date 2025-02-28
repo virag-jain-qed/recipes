@@ -1,0 +1,8 @@
+<div class="recipe-card">
+{{ dump(content.field_recipe_image.value.url)}}
+  <img src="{{ content.field_recipe_image.value.uri }}" alt="{{ content.field_recipe_image.alt }}" class="recipe-card-image">
+  <div class="recipe-card-body">
+    <p class="recipe-card-time">{{ content.field_cooking_time.value }} mins</p>
+    <p class="recipe-card-difficulty">{{ content.field_difficulty.value }}</p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="recipe-card-carousel-container">
+  <div class="recipe-card-carousel">
+    {% for row in content %}
+      <div class="recipe-card-carousel-item">
+        {# Include the recipe_card template for each row, passing the node entity for the recipe #}
+        {{ include('test_theme:recipe_card', { content: row._entity }) }}
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="carousel-prev" aria-label="Previous">&#10094;</button>
+  <button class="carousel-next" aria-label="Next">&#10095;</button>
+</div>

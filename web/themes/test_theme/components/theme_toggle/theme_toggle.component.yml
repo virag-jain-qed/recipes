@@ -1,0 +1,7 @@
+name: Theme Toggle
+description: A toggle button to switch between light and dark themes
+props:
+  attributes:
+    type: Attribute
+    description: HTML attributes for the component
+

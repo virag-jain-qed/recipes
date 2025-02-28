@@ -1,8 +1,11 @@
-<div id="header" class="flex w-full h-full bg-orange-500 justify-between p-12 text-white font-semibold">
-    <div id="header_logo" class="text-3xl"> {{custom_site_name}}</div>
-    <div id="header_menu" class="flex gap-x-8">
-        <a href="/">Home</a>
-        <a href="/featured">Featured</a>
-        <a href="/recipes">Recipes</a>
-    </div>
+<div id="header" class="flex w-full h-full dark:bg-orange-500 bg-red-500 justify-between p-12 text-white font-semibold">
+  <div id="header_logo" class="text-3xl">{{ custom_site_name }}</div>
+  <div id="header_menu" class="flex gap-x-8">
+    <a href="/">Home</a>
+    <a href="/featured">Featured</a>
+    <a href="/recipes">Recipes</a>
+
+    <!-- Include the theme toggle component -->
+    {{ include('test_theme:theme_toggle') }}
+  </div>
 </div>

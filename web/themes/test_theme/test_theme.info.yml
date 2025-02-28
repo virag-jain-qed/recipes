@@ -17,7 +17,11 @@ regions:
   breadcrumb: Breadcrumb
   content_above: Content Above
   content: Content
-  sidebar: Sidebar
+  # sidebar: Sidebar
   content_below: Content Below
   footer_top: Footer Top
   footer_bottom: Footer Bottom
+
+single_directory_components: 
+  directories:
+   - components
