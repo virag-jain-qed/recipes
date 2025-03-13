@@ -1,0 +1,7 @@
+block.settings.hello_world_hello_world:
+  type: block_settings
+  label: 'hello_world block'
+  mapping:
+    example:
+      type: string
+      label: Example

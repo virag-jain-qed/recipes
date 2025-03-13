@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * @file
+ * test_theme.theme
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+
+use Drupal\media\Entity\Media;
+
 /**
  * Implements hook_preprocess_page().
  */
@@ -16,10 +28,11 @@ function test_theme_preprocess_page(&$variables) {
   $variables['welcome_message'] = "Welcome to " . $variables['custom_site_name'] . "!";
 }
 
-
-// If the page is /featured then add custom suggestions
+/**
+ * If the page is /featured then add custom suggestions.
+ */
 function test_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  // Get the current route name
+  // Get the current route name.
   $route_name = \Drupal::routeMatch()->getRouteName();
 
   // Check if we are on the "Featured Page" (Adjust the path accordingly)
@@ -28,19 +41,50 @@ function test_theme_theme_suggestions_page_alter(array &$suggestions, array $var
   }
 }
 
-
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for theme debug.
+ * Implements hook_preprocess_node() for the 'recipe' content type.
  */
-// function test_theme_preprocess_page(array &$variables) {
-//   // Check if the site is in a development environment
-// if (\Drupal::currentUser()->isAuthenticated()) {
-//   // Enable Twig development mode for logged-in users
-//   $config['system.twig']['development_mode'] = TRUE;
-// }
-// else {
-//   // Disable Twig development mode for non-logged-in users
-//   $config['system.twig']['development_mode'] = FALSE;
-// }
+function test_theme_preprocess_node(&$variables) {
+  // Debugging the node type.
 
-// }
+  // dump("MY VAR:" . $variables['node']);.
+
+  dump('Node type is: ' . $variables['node']->field_media_image);
+
+  // Check if the field_media_image exists on the node.
+  if (isset($variables['node']->field_media_image->target_id)) {
+    dump('Field media image exists.');
+
+    // Get the media ID.
+    $media_id = $variables['node']->field_media_image->target_id;
+    dump('Media ID: ' . $media_id);
+
+    // Load the media entity.
+    $media = Media::load($media_id);
+    if ($media) {
+      dump('Media entity loaded successfully.');
+
+      // Get the image field from the media entity.
+      $image = $media->get('field_media_image')->entity;
+      if ($image) {
+        dump('Image field loaded successfully.');
+
+        // Get the file URL.
+        $url = \Drupal::service('file_url_generator')->generateAbsoluteString($image->getFileUri());
+        dump('Image URL: ' . $url);
+
+        // Set the image URL variable.
+        $variables['media_image_url'] = $url;
+      }
+      else {
+        dump('Image field is missing or empty.');
+      }
+    }
+    else {
+      dump('Media entity could not be loaded.');
+    }
+  }
+  else {
+    dump('Field media image does not exist.');
+  }
+}

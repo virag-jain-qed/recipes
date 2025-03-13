@@ -46,7 +46,7 @@
  */
 #}
 
-<div id="page-wrapper" class="page-wrapper">
+<div id="page-wrapper" class="page-wrapper bg-[rgb(var(--background))] text-[rgb(var(--foreground))]">
   <div id="page">
   
     {# Header region #}
@@ -62,13 +62,13 @@
             {{ page.breadcrumb }}
 
             {% if page.sidebar %}
-              <div class="sidebar-grid grid-full">
+              {# <div class="sidebar-grid grid-full">
                 <main role="main" class="site-main">
                   {{ page.content_above }}
                   {{ page.content }}
                 </main>
 
-                {{ page.sidebar }}
+                {{ page.sidebar }} #}
               </div>
             {% else %}
               <main id="glass" role="main">
@@ -79,16 +79,22 @@
             {{ page.content_below }}
           </div>
         </div>
-        <div class="social-bar">
-          {{ page.social }}
-        </div>
+        {# <div class="social-bar"> #}
+          {# {{ page.social }} #}
+        {# </div> #}
       </div>
     </div>
 
     <footer class="site-footer">
       <div class="site-footer__inner container">
         {{ page.footer_top }}
+        {% embed 'test_theme:footer_slot' with {text: 'Props passing'} %}
+          {% block footer_slot %}
+            <p>Footer slot content</p>
+          {% endblock %}
+        {% endembed %}
         {{ page.footer_bottom }}
+
       </div>
     </footer>
 

@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: 'class',
   content: [
     "./templates/**/*.twig",
+    "./components/**/*.{twig,html,js,ts}",
   ],
   theme: {
     container: {
@@ -55,5 +56,6 @@ module.exports = {
       },
     },
   },
+  plugins: [require("tailwindcss-animate")], // Add this line
 }
 

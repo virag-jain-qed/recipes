@@ -1,0 +1,31 @@
+/* Additional styles for theme toggle that might not be covered by Tailwind */
+
+/* Subtle rotation animation for the sun icon */
+.dark .icon-sun {
+  animation: spin-in 0.5s ease-out forwards;
+}
+
+/* Subtle rotation animation for the moon icon */
+.icon-moon {
+  animation: spin-in 0.5s ease-out forwards;
+}
+
+@keyframes spin-in {
+  from {
+    transform: rotate(-30deg) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Theme transition for the entire site */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out !important;
+}
+

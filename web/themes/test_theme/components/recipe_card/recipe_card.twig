@@ -1,0 +1,11 @@
+<div class="recipe-card">
+  {# Dump the image field for debugging purposes #}
+  {# {{ dump(image_url) }} #}
+  
+  <img src="{{ image }}" alt="{{ content.field_recipe_image.alt }}" class="recipe-card-image">
+  
+  <div class="recipe-card-body">
+    <p class="recipe-card-time">{{ cooking_time }} mins</p>
+    <p class="recipe-card-difficulty">{{ difficulty }}</p>
+  </div>
+</div>

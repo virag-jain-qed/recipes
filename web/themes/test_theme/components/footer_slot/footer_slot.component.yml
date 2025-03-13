@@ -1,0 +1,6 @@
+type: component
+slots:
+  footer_slot:
+    type: markup
+    label: 'Footer Slot'
+    description: 'The footer slot.'

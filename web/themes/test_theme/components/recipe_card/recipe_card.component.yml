@@ -1,0 +1,13 @@
+type: component
+
+props:
+  type: object
+  items:
+    type: object
+    properties:
+      image:
+        type: string
+      cooking_time:
+        type: string
+      difficulty:
+        type: string

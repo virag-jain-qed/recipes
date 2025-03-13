@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TailwindCSS will handle the background color based on dark mode */
+
+  
+  #page-wrapper .dark {
+    background-color: black;
+    color: white;
+  }
+  
+  :root {
+    --background: 255, 255, 255; /* Light Mode background */
+    --foreground: 0, 0, 0; /* Light Mode text color */
+  }
+  
+  .dark {
+    --background: 30, 30, 30; /* Dark Mode background */
+    --foreground: 255, 255, 255; /* Dark Mode text color */
+  }
+  

@@ -1,0 +1,20 @@
+# id: carousel
+# label: 'Recipe Card Carousel'
+# description: 'A carousel to display multiple recipe cards.'
+# category: 'Content'
+# template: 'carousel'
+type: component
+props:
+  recipes:
+    type: array
+    items:
+      type: object
+      properties:
+        field_recipe_image:
+          type: string
+        field_title:
+          type: string
+        field_cooking_time:
+          type: string
+        field_difficulty:
+          type: string
