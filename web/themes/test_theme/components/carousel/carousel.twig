@@ -1,9 +1,24 @@
 <div class="recipe-card-carousel-container">
   <div class="recipe-card-carousel">
     {% for row in content %}
+    {# {{dump(row)}} #}
+      {# Get the entity from the row #}
+      {% set entity = row._entity %}
+      {# {% set title = entity.get('field_recipe_title').value %} #}
+      {% set image_url = entity.get('field_recipe_image').entity.uri.value %}
+      {% set image = image_url ? file_url(image_url) : '' %}
+      {# {{dump(entity.field_recipe_image.entity)}} #}
+      {% set cooking_time = entity.get('field_cooking_time').value %}
+      {% set difficulty = entity.get('field_difficulty').value %}
+
+      
       <div class="recipe-card-carousel-item">
-        {# Include the recipe_card template for each row, passing the node entity for the recipe #}
-        {{ include('test_theme:recipe_card', { content: row._entity }) }}
+        {# Include the recipe_card template for each row, passing the necessary fields #}
+        {{ include('test_theme:recipe_card', {
+          image: image,
+          cooking_time: cooking_time,
+          difficulty: difficulty
+        }) }}
       </div>
     {% endfor %}
   </div>

@@ -1,23 +1,31 @@
-/* Additional custom styles if needed */
-.theme-toggle-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+/* Additional styles for theme toggle that might not be covered by Tailwind */
+
+/* Subtle rotation animation for the sun icon */
+.dark .icon-sun {
+  animation: spin-in 0.5s ease-out forwards;
 }
 
-/* Add a subtle pulse animation when toggling */
-.theme-toggle-button:active .toggle-circle {
-  animation: pulse 0.3s ease-in-out;
+/* Subtle rotation animation for the moon icon */
+.icon-moon {
+  animation: spin-in 0.5s ease-out forwards;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
+@keyframes spin-in {
+  from {
+    transform: rotate(-30deg) scale(0.8);
+    opacity: 0;
   }
-  50% {
-    transform: scale(0.95);
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
   }
-  100% {
-    transform: scale(1);
-  }
+}
+
+/* Theme transition for the entire site */
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out !important;
 }
 

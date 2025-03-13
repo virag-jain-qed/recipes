@@ -88,6 +88,11 @@
     <footer class="site-footer">
       <div class="site-footer__inner container">
         {{ page.footer_top }}
+        {% embed 'test_theme:footer_slot' with {text: 'Props passing'} %}
+          {% block footer_slot %}
+            <p>Footer slot content</p>
+          {% endblock %}
+        {% endembed %}
         {{ page.footer_bottom }}
 
       </div>

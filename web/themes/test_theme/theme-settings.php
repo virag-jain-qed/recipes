@@ -1,5 +1,12 @@
 <?php
+
+/**
+ * @file
+ * Theme_name.theme.
+ */
+
 use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
@@ -40,7 +47,7 @@ function test_theme_form_system_theme_settings_alter(&$form, FormStateInterface 
  */
 function theme_name_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $current_path = \Drupal::service('path.current')->getPath();
-  
+
   if ($current_path == '/recipes') {
     $suggestions[] = 'page__recipes';
   }
@@ -53,7 +60,7 @@ function theme_name_theme_suggestions_page_alter(array &$suggestions, array $var
  * Implements hook_preprocess_page().
  */
 function theme_name_preprocess_page(&$variables) {
-  // Add variables for the hero section on the homepage
+  // Add variables for the hero section on the homepage.
   if ($variables['is_front']) {
     $variables['hero_title'] = t('Discover Delicious Recipes');
     $variables['hero_description'] = t('Explore our collection of mouth-watering recipes from around the world. From quick weekday meals to gourmet dishes.');

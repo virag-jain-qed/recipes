@@ -3,6 +3,7 @@ module.exports = {
   darkMode: 'class',
   content: [
     "./templates/**/*.twig",
+    "./components/**/*.{twig,html,js,ts}",
   ],
   theme: {
     container: {
@@ -55,5 +56,6 @@ module.exports = {
       },
     },
   },
+  plugins: [require("tailwindcss-animate")], // Add this line
 }
 

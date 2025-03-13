@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"npx tailwindcss --input css/main.css --output dist/index.css",
-    "watch":"npx tailwindcss --input css/main.css --output dist/index.css --watch"
+    "dev": "npx tailwindcss --input css/main.css --output dist/index.css",
+    "watch": "npx tailwindcss --input css/main.css --output dist/index.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
     "picocolors": "^1.1.1",
     "postcss-value-parser": "^4.2.0",
     "source-map-js": "^1.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "update-browserslist-db": "^1.1.2"
   }
 }

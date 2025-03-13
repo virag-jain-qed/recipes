@@ -5,9 +5,9 @@ props:
   items:
     type: object
     properties:
-      field_recipe_image:
+      image:
         type: string
-      field_cooking_time:
+      cooking_time:
         type: string
-      field_difficulty:
+      difficulty:
         type: string

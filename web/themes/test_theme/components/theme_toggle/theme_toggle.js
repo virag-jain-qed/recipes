@@ -1,86 +1,61 @@
-// ;((Drupal) => {
-//   Drupal.behaviors.themeToggle = {
-//     attach: (context, settings) => {
-//       console.log('themeToggle');
-//       const toggleButton = context.querySelector(".theme-toggle-button")
-//       if (!toggleButton) return
+/**
+ * @file
+ * Theme toggle functionality.
+ */
 
-//       // Initialize theme from localStorage or system preference
-//       const savedTheme = localStorage.getItem("theme")
-//       const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-
-//       let currentTheme = "light"
-//       if (savedTheme) {
-//         currentTheme = savedTheme
-//       } else if (systemPrefersDark) {
-//         currentTheme = "dark"
-//       }
-
-//       // Apply initial theme
-//       if (currentTheme === "dark") {
-//         document.documentElement.classList.add("dark")
-//         toggleButton.setAttribute("aria-checked", "true")
-//       } else {
-//         document.documentElement.classList.remove("dark")
-//         toggleButton.setAttribute("aria-checked", "false")
-//       }
-
-//       // Update toggle appearance
-//       updateToggleAppearance(toggleButton, currentTheme)
-
-//       // Add event listener
-//       toggleButton.addEventListener("click", () => {
-//         currentTheme = currentTheme === "light" ? "dark" : "light"
-
-//         if (currentTheme === "dark") {
-//           document.documentElement.classList.add("dark")
-//           toggleButton.setAttribute("aria-checked", "true")
-//         } else {
-//           document.documentElement.classList.remove("dark")
-//           toggleButton.setAttribute("aria-checked", "false")
-//         }
-
-//         localStorage.setItem("theme", currentTheme)
-//         updateToggleAppearance(toggleButton, currentTheme)
-//       })
-//     },
-//   }
-
-//   function updateToggleAppearance(button, theme) {
-//     const toggleCircle = button.querySelector(".toggle-circle")
-//     const sunIcon = button.querySelector(".sun-icon")
-//     const moonIcon = button.querySelector(".moon-icon")
-
-//     if (theme === "dark") {
-//       toggleCircle.classList.add("translate-x-6")
-//       toggleCircle.classList.remove("translate-x-0")
-//       sunIcon.classList.add("hidden")
-//       moonIcon.classList.remove("hidden")
-//     } else {
-//       toggleCircle.classList.remove("translate-x-6")
-//       toggleCircle.classList.add("translate-x-0")
-//       sunIcon.classList.remove("hidden")
-//       moonIcon.classList.add("hidden")
-//     }
-//   }
-// })(Drupal)
-
-(function (Drupal) {
+// Import necessary modules.  This assumes Drupal is available globally, otherwise adjust as needed.
+;((Drupal, once) => {
   Drupal.behaviors.themeToggle = {
     attach: (context, settings) => {
-      console.log("Theme Toggle Script Loaded");
+      const themeToggleBtn = once("theme-toggle", "#theme-toggle", context)
 
-      // Select the toggle button
-      const toggleButton = document.querySelector(".theme-toggle-button");
-      if (!toggleButton) return;
+      if (themeToggleBtn.length) {
+        const toggleBtn = themeToggleBtn[0]
+        const htmlElement = document.documentElement
+        const currentTheme = localStorage.getItem("theme")
 
-      // Toggle dark mode
-      toggleButton.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        console.log("Toggled dark mode");
-      });
-    }
-  };
-})(Drupal);
+        // Set initial theme based on:
+        // 1. Previous user preference from localStorage
+        // 2. System preference if no localStorage value
+        // 3. Default to light if neither is available
+        if (currentTheme) {
+          htmlElement.classList.toggle("dark", currentTheme === "dark")
+        } else {
+          const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+          htmlElement.classList.toggle("dark", prefersDarkMode)
+          localStorage.setItem("theme", prefersDarkMode ? "dark" : "light")
+        }
 
+        // Toggle theme when button is clicked
+        toggleBtn.addEventListener("click", () => {
+          // Add a subtle scale animation on click
+          toggleBtn.classList.add("scale-95")
+          setTimeout(() => {
+            toggleBtn.classList.remove("scale-95")
+          }, 100)
+
+          // Toggle dark class
+          htmlElement.classList.toggle("dark")
+
+          // Store user preference
+          const isDarkMode = htmlElement.classList.contains("dark")
+          localStorage.setItem("theme", isDarkMode ? "dark" : "light")
+
+          // Dispatch a custom event that other scripts can listen for
+          const themeChangeEvent = new CustomEvent("themeChanged", {
+            detail: { theme: isDarkMode ? "dark" : "light" },
+          })
+          document.dispatchEvent(themeChangeEvent)
+        })
+
+        // Listen for system preference changes
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+          if (localStorage.getItem("theme") === null) {
+            htmlElement.classList.toggle("dark", e.matches)
+          }
+        })
+      }
+    },
+  }
+})(Drupal, once)
 

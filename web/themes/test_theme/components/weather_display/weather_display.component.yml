@@ -1,0 +1,18 @@
+name: Weather Display
+description: A component to display weather information.
+
+# properties:
+#   location:
+#     type: string
+#     description: The location for which to display the weather.
+#     default: "New York"
+#   units:
+#     type: string
+#     description: The units for temperature (e.g., metric or imperial).
+#     default: "metric"
+
+# methods:
+#   fetchWeather:
+#     description: Fetches the weather data for the specified location.
+#   displayWeather:
+#     description: Displays the fetched weather data.

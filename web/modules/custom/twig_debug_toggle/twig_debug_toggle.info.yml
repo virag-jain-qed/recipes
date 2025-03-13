@@ -1,6 +1,0 @@
-name: 'Twig Debug Toggle'
-type: module
-description: 'Toggles Twig debug mode for authenticated users'
-core_version_requirement: ^9 || ^10 || ^11
-dependencies: []
-package: Custom

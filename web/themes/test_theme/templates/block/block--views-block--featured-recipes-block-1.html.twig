@@ -17,6 +17,7 @@
   <div class="recipe-slider-container">
     <div class="recipe-slider" id="recipe-slider">
       {% set recipes = content['#view'].result %}
+      {# {{dump(recipes)}} #}
       {% if recipes %}
         {{ include('test_theme:carousel', { content: recipes }) }}
       {% else %}
