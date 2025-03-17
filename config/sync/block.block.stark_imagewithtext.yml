@@ -1,0 +1,30 @@
+uuid: 787ced73-6c1f-4d73-97fd-2ad18e086649
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_top_block:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+  module:
+    - block_content
+    - system
+  theme:
+    - stark
+id: stark_imagewithtext
+theme: stark
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+settings:
+  id: 'block_content:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+  label: 'image with text'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /homepage

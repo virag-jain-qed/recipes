@@ -1,0 +1,25 @@
+uuid: da36e5ea-dad0-47c4-89b1-e8b594e5eb29
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+  module:
+    - block_content
+  theme:
+    - stark
+id: stark_contactform
+theme: stark
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+settings:
+  id: 'block_content:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+  label: 'Contact Form'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

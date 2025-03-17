@@ -1,0 +1,8 @@
+uuid: 66bc1832-c52e-4f2f-8df6-433690cccef5
+langcode: en
+status: true
+dependencies: {  }
+id: banner_top_block
+label: 'Banner Top Block'
+revision: false
+description: null

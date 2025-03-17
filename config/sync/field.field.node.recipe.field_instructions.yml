@@ -1,0 +1,22 @@
+uuid: fc271a21-6464-4a8a-92e6-8a1c96460b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_instructions
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.field_instructions
+field_name: field_instructions
+entity_type: node
+bundle: recipe
+label: Instructions
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

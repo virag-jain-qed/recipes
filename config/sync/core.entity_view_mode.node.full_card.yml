@@ -1,0 +1,11 @@
+uuid: c476816a-38d2-489f-9a63-6429449dd8f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_card
+label: 'Details Card'
+description: ''
+targetEntityType: node
+cache: true

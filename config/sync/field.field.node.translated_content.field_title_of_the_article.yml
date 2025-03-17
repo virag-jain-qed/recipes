@@ -1,0 +1,19 @@
+uuid: 769ab0c9-123a-4dea-935b-1e6f9b8f2805
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_of_the_article
+    - node.type.translated_content
+id: node.translated_content.field_title_of_the_article
+field_name: field_title_of_the_article
+entity_type: node
+bundle: translated_content
+label: 'Title of the article'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

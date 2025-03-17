@@ -1,0 +1,22 @@
+uuid: a52988ca-2778-4d12-8938-38dc4525b1dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: recipe_url_pattern
+label: 'Recipe URL Pattern'
+type: 'canonical_entities:node'
+pattern: 'recipes/[node:nid]'
+selection_criteria:
+  1453e6b7-6cc8-42e9-bf7e-3e884c463283:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1453e6b7-6cc8-42e9-bf7e-3e884c463283
+    context_mapping:
+      node: node
+    bundles:
+      recipe: recipe
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,10 @@
+uuid: 36a95b82-0ca5-48d1-a034-6ce767f94fb7
+langcode: en
+status: true
+dependencies: {  }
+id: recipe_paragraph
+label: 'Recipe Paragraph'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

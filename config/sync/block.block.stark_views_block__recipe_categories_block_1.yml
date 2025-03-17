@@ -1,0 +1,29 @@
+uuid: 4b485c77-8547-4cb1-a7fa-c530293f9dcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recipe_categories
+  module:
+    - system
+    - views
+  theme:
+    - stark
+id: stark_views_block__recipe_categories_block_1
+theme: stark
+region: highlighted
+weight: 0
+provider: null
+plugin: 'views_block:recipe_categories-block_1'
+settings:
+  id: 'views_block:recipe_categories-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/homepage\r\n"

@@ -1,0 +1,18 @@
+uuid: f4285817-8169-4be3-9e02-e4c4a97d6ed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.recipe_paragraph
+id: paragraph.recipe_paragraph.created
+field_name: created
+entity_type: paragraph
+bundle: recipe_paragraph
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

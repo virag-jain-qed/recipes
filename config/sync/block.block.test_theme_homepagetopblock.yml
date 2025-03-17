@@ -1,0 +1,30 @@
+uuid: 114507f9-672c-4ab5-a429-61cbc9207579
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_top_block:b237cdba-8038-4175-81ed-f9082ca2c825'
+  module:
+    - block_content
+    - system
+  theme:
+    - test_theme
+id: test_theme_homepagetopblock
+theme: test_theme
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:b237cdba-8038-4175-81ed-f9082ca2c825'
+settings:
+  id: 'block_content:b237cdba-8038-4175-81ed-f9082ca2c825'
+  label: 'Home Page Top block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/\r\n"

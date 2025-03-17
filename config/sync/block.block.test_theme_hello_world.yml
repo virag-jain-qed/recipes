@@ -1,0 +1,21 @@
+uuid: e01aa10a-8a9f-442b-9ce1-7f7768d1c7fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - hello_world
+  theme:
+    - test_theme
+id: test_theme_hello_world
+theme: test_theme
+region: content_above
+weight: 0
+provider: null
+plugin: hello_world_hello_world
+settings:
+  id: hello_world_hello_world
+  label: hello_world
+  label_display: visible
+  provider: hello_world
+  example: 'Hello world!'
+visibility: {  }

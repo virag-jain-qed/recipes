@@ -1,0 +1,90 @@
+uuid: 9fd435ee-b9d7-4e80-81d5-7271823ef23e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_difficulty
+    - field.storage.node.field_ingredients
+    - field.storage.node.field_recipe_category
+    - field.storage.node.field_recipe_tags
+    - field.storage.node.field_tags
+    - search_api.server.default_server
+  module:
+    - node
+id: recipe_search
+name: 'Recipe Search'
+description: ''
+read_only: false
+field_settings:
+  field_difficulty:
+    label: Difficulty
+    datasource_id: 'entity:node'
+    property_path: field_difficulty
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_difficulty
+  field_ingredients:
+    label: Ingredients
+    datasource_id: 'entity:node'
+    property_path: field_ingredients
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ingredients
+  field_recipe_category:
+    label: 'Recipe Category'
+    datasource_id: 'entity:node'
+    property_path: field_recipe_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_recipe_category
+  field_recipe_tags:
+    label: 'Recipe Tags'
+    datasource_id: 'entity:node'
+    property_path: field_recipe_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_recipe_tags
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: default_server

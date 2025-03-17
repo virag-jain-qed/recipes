@@ -1,0 +1,43 @@
+uuid: 5ececaad-983d-4e36-8b25-27a4f4cd625b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner_top_block
+    - field.field.block_content.banner_top_block.field_banner_image
+    - field.field.block_content.banner_top_block.field_banner_text
+    - image.style.wide
+  module:
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.banner_top_block.default
+targetEntityType: block_content
+bundle: banner_top_block
+mode: default
+content:
+  field_banner_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_banner_text:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+uuid: cdbd8ce7-84a1-4fe1-9863-0a4021c76c9c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_top_block:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+  module:
+    - block_content
+    - system
+  theme:
+    - test_theme
+id: test_theme_imagewithtext_2
+theme: test_theme
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+settings:
+  id: 'block_content:1c38e6cf-841a-4e2c-8c22-ee1c39f7c7da'
+  label: 'image with text'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /featured

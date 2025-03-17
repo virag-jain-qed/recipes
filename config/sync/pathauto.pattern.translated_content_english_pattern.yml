@@ -1,0 +1,33 @@
+uuid: c5ecb126-8f46-4991-a03d-f6048770bf4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: translated_content_english_pattern
+label: 'translated content english pattern'
+type: 'canonical_entities:node'
+pattern: '/article/[node:title]'
+selection_criteria:
+  2029a7be-0795-4c3e-8e5d-4e82362266ce:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 2029a7be-0795-4c3e-8e5d-4e82362266ce
+    context_mapping:
+      node: node
+    bundles:
+      translated_content: translated_content
+  73bc48ea-52da-4498-be0e-b95dec207770:
+    id: language
+    negate: false
+    uuid: 73bc48ea-52da-4498-be0e-b95dec207770
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

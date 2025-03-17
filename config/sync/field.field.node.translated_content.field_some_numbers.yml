@@ -1,0 +1,23 @@
+uuid: 026bdd9b-6f0f-425a-acc3-a2a2d6ee8d63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_some_numbers
+    - node.type.translated_content
+id: node.translated_content.field_some_numbers
+field_name: field_some_numbers
+entity_type: node
+bundle: translated_content
+label: 'Some Numbers'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

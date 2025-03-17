@@ -1,0 +1,24 @@
+uuid: 678e7f96-1472-4ef4-962e-364b891988f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.plain_text
+    - node.type.translated_content
+  module:
+    - text
+id: node.translated_content.field_body
+field_name: field_body
+entity_type: node
+bundle: translated_content
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

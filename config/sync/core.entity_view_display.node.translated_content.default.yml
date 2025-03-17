@@ -1,0 +1,70 @@
+uuid: 15119ee6-6fd2-4cd6-b187-0a1d1dc51b83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.translated_content.field_a_image_for_article
+    - field.field.node.translated_content.field_body
+    - field.field.node.translated_content.field_email
+    - field.field.node.translated_content.field_some_numbers
+    - field.field.node.translated_content.field_title_of_the_article
+    - node.type.translated_content
+  module:
+    - image
+    - text
+    - user
+id: node.translated_content.default
+targetEntityType: node
+bundle: translated_content
+mode: default
+content:
+  field_a_image_for_article:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_some_numbers:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_title_of_the_article:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

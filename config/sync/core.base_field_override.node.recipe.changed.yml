@@ -1,0 +1,18 @@
+uuid: 2ccc74fc-89f3-40b3-94c7-2ac063a9e44b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+id: node.recipe.changed
+field_name: changed
+entity_type: node
+bundle: recipe
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
