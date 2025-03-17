@@ -1,0 +1,25 @@
+uuid: 4c9cad22-9ede-43db-9294-82d70bc8ccdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - test_theme
+id: test_theme_mainnavigation
+theme: test_theme
+region: highlighted
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

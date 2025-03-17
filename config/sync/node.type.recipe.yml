@@ -1,0 +1,17 @@
+uuid: 5e3d5ed1-abb4-4007-8b37-c789fbf5b6ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Recipe
+type: recipe
+description: 'Use this content type to create recipes'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

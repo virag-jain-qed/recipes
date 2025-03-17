@@ -1,0 +1,56 @@
+uuid: c4bda046-d797-436f-9904-678eb8aa79fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.recipe.field_cooking_time
+    - field.field.node.recipe.field_difficulty
+    - field.field.node.recipe.field_featured
+    - field.field.node.recipe.field_ingredients
+    - field.field.node.recipe.field_instructions
+    - field.field.node.recipe.field_recipe_category
+    - field.field.node.recipe.field_recipe_image
+    - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_summary
+    - node.type.recipe
+  module:
+    - layout_builder
+    - options
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.recipe.card
+targetEntityType: node
+bundle: recipe
+mode: card
+content:
+  field_difficulty:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_recipe_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_cooking_time: true
+  field_featured: true
+  field_ingredients: true
+  field_instructions: true
+  field_recipe_category: true
+  field_recipe_tags: true
+  field_summary: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+uuid: 2aacbfed-8c20-4c38-85ca-f0f4eb961ef0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.similar_recipes
+  module:
+    - system
+    - views
+  theme:
+    - stark
+id: stark_views_block__similar_recipes_block_1
+theme: stark
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:similar_recipes-block_1'
+settings:
+  id: 'views_block:similar_recipes-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/recipes/*'

@@ -1,0 +1,20 @@
+uuid: 08919d64-c969-407e-bcba-013de14132a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.recipe_category
+  module:
+    - path
+id: taxonomy_term.recipe_category.path
+field_name: path
+entity_type: taxonomy_term
+bundle: recipe_category
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

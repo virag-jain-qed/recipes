@@ -1,0 +1,30 @@
+uuid: 669ca323-0d75-49cd-a63b-568e89932958
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.similar_recipes
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__similar_recipes_block_1
+theme: olivero
+region: content_below
+weight: 0
+provider: null
+plugin: 'views_block:similar_recipes-block_1'
+settings:
+  id: 'views_block:similar_recipes-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/recipes/*'

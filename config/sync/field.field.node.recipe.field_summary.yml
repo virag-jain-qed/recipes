@@ -1,0 +1,22 @@
+uuid: 255b84cd-7c0b-425b-a04f-73199d886f0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.field_summary
+field_name: field_summary
+entity_type: node
+bundle: recipe
+label: Summary
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

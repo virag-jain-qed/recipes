@@ -1,0 +1,11 @@
+uuid: a26d9f80-5ace-419e-b5c3-0e27589aab4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card
+label: Card
+description: 'This is the recipe card '
+targetEntityType: node
+cache: true

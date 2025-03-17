@@ -1,0 +1,25 @@
+uuid: 76ed904f-fab8-4be4-8203-b0be983d9d98
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_contactform
+theme: olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+settings:
+  id: 'block_content:ffaa4a41-1196-4bc6-af00-6c424ef67129'
+  label: 'Contact Form'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

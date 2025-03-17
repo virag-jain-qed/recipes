@@ -1,0 +1,30 @@
+uuid: 4ae12bbf-78aa-4d38-9300-ada1d572edbe
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c9a7fdbe-683d-484d-a447-1971d8f8b28a'
+  module:
+    - block_content
+    - system
+  theme:
+    - test_theme
+id: test_theme_firstblock
+theme: test_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c9a7fdbe-683d-484d-a447-1971d8f8b28a'
+settings:
+  id: 'block_content:c9a7fdbe-683d-484d-a447-1971d8f8b28a'
+  label: 'first block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /carousel

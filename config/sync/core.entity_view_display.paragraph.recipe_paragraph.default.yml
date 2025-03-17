@@ -1,0 +1,41 @@
+uuid: 85505c90-f287-4cee-8c1a-5c6766278d5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recipe_paragraph.field_body
+    - field.field.paragraph.recipe_paragraph.field_image
+    - field.field.paragraph.recipe_paragraph.field_video
+    - paragraphs.paragraphs_type.recipe_paragraph
+id: paragraph.recipe_paragraph.default
+targetEntityType: paragraph
+bundle: recipe_paragraph
+mode: default
+content:
+  field_body:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

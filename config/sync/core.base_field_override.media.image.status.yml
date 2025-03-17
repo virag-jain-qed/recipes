@@ -1,0 +1,22 @@
+uuid: ded0c81a-0260-4887-9834-2bce9afbb498
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.status
+field_name: status
+entity_type: media
+bundle: image
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
