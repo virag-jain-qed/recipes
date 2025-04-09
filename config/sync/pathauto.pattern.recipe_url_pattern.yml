@@ -7,12 +7,12 @@ dependencies:
 id: recipe_url_pattern
 label: 'Recipe URL Pattern'
 type: 'canonical_entities:node'
-pattern: 'recipes/[node:nid]'
+pattern: 'recipes/[node:title]'
 selection_criteria:
-  1453e6b7-6cc8-42e9-bf7e-3e884c463283:
+  8a2728dc-9168-41cf-b901-6d6cbae24f06:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 1453e6b7-6cc8-42e9-bf7e-3e884c463283
+    uuid: 8a2728dc-9168-41cf-b901-6d6cbae24f06
     context_mapping:
       node: node
     bundles:

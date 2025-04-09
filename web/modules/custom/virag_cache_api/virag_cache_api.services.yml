@@ -1,0 +1,5 @@
+services:
+  virag_cache_api.forecast_client:
+    class: Drupal\virag_cache_api\ForecastClient
+    arguments: ['@http_client', '@logger.factory','@cache.default']
+  Drupal\virag_cache_api\ForecastClientInterface: '@virag_cache_api.forecast_client'

@@ -1,0 +1,13 @@
+uuid: 6b30b0d9-a6e2-4cc3-9fba-d0bd9cd31f88
+langcode: en
+status: true
+dependencies:
+  module:
+    - virag_custom_entity
+_core:
+  default_config_hash: yVnoIG_HmylE8uoxPaJY0EnrykMfbCEnGjpmhYPqr00
+id: virag_custom_entity_delete_action
+label: 'Delete virag custom entities'
+type: virag_custom_entity
+plugin: 'entity:delete_action:virag_custom_entity'
+configuration: {  }

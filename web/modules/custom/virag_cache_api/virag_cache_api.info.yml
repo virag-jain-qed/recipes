@@ -1,0 +1,5 @@
+name: "Virag Cache API"
+type: module
+description: "This module contains cache api"
+package: Custom
+core_version_requirement: ^10 || ^11

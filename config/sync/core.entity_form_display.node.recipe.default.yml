@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_image
-    - field.field.node.recipe.field_recipe_tags
     - field.field.node.recipe.field_summary
     - node.type.recipe
   module:
@@ -57,12 +56,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_instructions:
-    type: text_textarea
-    weight: 122
+    type: string_textfield
+    weight: 130
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      size: 60
+      placeholder: 'Boil water'
     third_party_settings: {  }
   field_recipe_category:
     type: entity_reference_autocomplete
@@ -80,16 +79,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_recipe_tags:
-    type: entity_reference_autocomplete
-    weight: 126
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_summary:
     type: text_textarea

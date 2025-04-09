@@ -1,0 +1,19 @@
+uuid: bc66e0fd-9284-43a8-b20c-821fd3062fd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - virag_custom_entity
+    - virag_field_api
+id: virag_custom_entity.field_birthday
+field_name: field_birthday
+entity_type: virag_custom_entity
+type: birthday
+settings: {  }
+module: virag_field_api
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

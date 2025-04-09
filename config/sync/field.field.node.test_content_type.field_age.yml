@@ -1,0 +1,22 @@
+uuid: fb8cbd4b-7750-47d1-9011-85bc7dd46c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age
+    - node.type.test_content_type
+  module:
+    - virag_field_api
+id: node.test_content_type.field_age
+field_name: field_age
+entity_type: node
+bundle: test_content_type
+label: Birthday
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_age: 1
+field_type: birthday

@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_image
-    - field.field.node.recipe.field_recipe_tags
     - field.field.node.recipe.field_summary
     - node.type.recipe
   module:
@@ -57,11 +56,12 @@ content:
     weight: 103
     region: content
   field_instructions:
-    type: text_default
+    type: string
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 102
+    weight: 110
     region: content
   field_recipe_category:
     type: entity_reference_label
@@ -79,14 +79,6 @@ content:
       link: false
     third_party_settings: {  }
     weight: 104
-    region: content
-  field_recipe_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 106
     region: content
   field_summary:
     type: text_default

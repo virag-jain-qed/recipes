@@ -1,0 +1,49 @@
+uuid: 2d612d9f-ffd9-4cdb-b5d3-3891d2491227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vendor.field_vendor_attending
+    - field.field.node.vendor.field_vendor_contact_email
+    - field.field.node.vendor.field_vendor_contact_name
+    - node.type.vendor
+  module:
+    - user
+id: node.vendor.default
+targetEntityType: node
+bundle: vendor
+mode: default
+content:
+  field_vendor_attending:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_vendor_contact_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_vendor_contact_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

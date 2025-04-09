@@ -1,0 +1,22 @@
+uuid: 7b77778f-91e4-4a51-b59d-236025ced5ce
+langcode: en
+status: true
+dependencies: {  }
+id: oauth_scope
+name: oauth_scope
+description: 'this sets the scope for oauth role'
+grant_types:
+  client_credentials:
+    status: false
+    description: ''
+  authorization_code:
+    status: true
+    description: ''
+  refresh_token:
+    status: true
+    description: ''
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: oauth_role

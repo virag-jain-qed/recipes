@@ -1,22 +1,19 @@
-uuid: fc271a21-6464-4a8a-92e6-8a1c96460b7f
+uuid: 316b956f-b8ea-456e-ac1a-bb93d7fa8ca7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_instructions
     - node.type.recipe
-  module:
-    - text
 id: node.recipe.field_instructions
 field_name: field_instructions
 entity_type: node
 bundle: recipe
 label: Instructions
-description: ''
-required: true
+description: 'Write instructions step-by-step'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  allowed_formats: {  }
-field_type: text_long
+settings: {  }
+field_type: string

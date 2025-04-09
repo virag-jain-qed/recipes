@@ -1,0 +1,31 @@
+uuid: 39ce24cf-f392-4d12-99f5-44055056a139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_content_type.field_age
+    - node.type.test_content_type
+  module:
+    - user
+    - virag_field_api
+id: node.test_content_type.default
+targetEntityType: node
+bundle: test_content_type
+mode: default
+content:
+  field_age:
+    type: birthday_default
+    label: above
+    settings:
+      date_format: medium
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

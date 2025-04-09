@@ -1,0 +1,12 @@
+uuid: efffc364-89f6-4424-8fea-09621ef654ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - consumers
+id: oauth_role
+label: 'OAuth Role'
+weight: 4
+is_admin: false
+permissions:
+  - 'view own consumer entities'

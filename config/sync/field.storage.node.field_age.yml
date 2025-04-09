@@ -1,0 +1,19 @@
+uuid: b5407d52-7ce4-43fb-a793-7caea5a1e0ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - virag_field_api
+id: node.field_age
+field_name: field_age
+entity_type: node
+type: birthday
+settings: {  }
+module: virag_field_api
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

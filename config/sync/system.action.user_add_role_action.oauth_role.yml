@@ -1,0 +1,14 @@
+uuid: 71aed04b-2a5a-44c2-8c03-9aa7914dffde
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.oauth_role
+  module:
+    - user
+id: user_add_role_action.oauth_role
+label: 'Add the OAuth Role role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: oauth_role

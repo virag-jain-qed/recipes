@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_image
-    - field.field.node.recipe.field_recipe_tags
     - field.field.node.recipe.field_summary
     - node.type.recipe
   module:
@@ -66,25 +65,6 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
-          fce31115-2abe-41d0-a375-e91d82d2e98a:
-            uuid: fce31115-2abe-41d0-a375-e91d82d2e98a
-            region: content
-            configuration:
-              id: 'field_block:node:recipe:field_recipe_tags'
-              label: 'Recipe Tags'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 1
             additional: {  }
           74298db3-90fb-460d-b6f8-548e26d8adb9:
             uuid: 74298db3-90fb-460d-b6f8-548e26d8adb9
@@ -175,22 +155,7 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings:
           label: ''
-        components:
-          0b3a7db2-8c26-4524-9786-8768b0134df3:
-            uuid: 0b3a7db2-8c26-4524-9786-8768b0134df3
-            region: content
-            configuration:
-              id: 'field_block:node:recipe:field_instructions'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
+        components: {  }
         third_party_settings: {  }
 id: node.recipe.full_card
 targetEntityType: node
@@ -221,13 +186,6 @@ content:
     third_party_settings: {  }
     weight: 103
     region: content
-  field_instructions:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
   field_recipe_category:
     type: entity_reference_label
     label: above
@@ -245,14 +203,6 @@ content:
     third_party_settings: {  }
     weight: 104
     region: content
-  field_recipe_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 106
-    region: content
   field_summary:
     type: text_default
     label: above
@@ -267,5 +217,6 @@ content:
     region: content
 hidden:
   field_featured: true
+  field_instructions: true
   langcode: true
   search_api_excerpt: true

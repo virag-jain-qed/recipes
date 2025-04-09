@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.recipe.field_instructions
     - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_image
-    - field.field.node.recipe.field_recipe_tags
     - field.field.node.recipe.field_summary
     - node.type.recipe
   module:
@@ -49,7 +48,6 @@ hidden:
   field_ingredients: true
   field_instructions: true
   field_recipe_category: true
-  field_recipe_tags: true
   field_summary: true
   langcode: true
   links: true

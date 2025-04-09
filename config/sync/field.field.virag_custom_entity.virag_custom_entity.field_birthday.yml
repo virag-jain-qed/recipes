@@ -1,0 +1,22 @@
+uuid: caf99afe-d286-4e51-ae5e-b1a7bfa515a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.virag_custom_entity.field_birthday
+  module:
+    - virag_custom_entity
+    - virag_field_api
+id: virag_custom_entity.virag_custom_entity.field_birthday
+field_name: field_birthday
+entity_type: virag_custom_entity
+bundle: virag_custom_entity
+label: Birthday
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_age: 1
+field_type: birthday
